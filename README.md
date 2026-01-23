@@ -72,7 +72,7 @@ Markets exhibit volatility clustering, as such risk teams and systematic strateg
 - low vol vs high vol
 - normal vs stressed
 
-In our case we are using quantile thresholds. After computing rolling annualized volatility σₜ(W), regimes are assigned using corss-sectional quantiles over time of σₜ(W) for each asset (e.g., LOW if σₜ(W) is below its own historical 30th percentile). This converts a continuous time series into an interpretable state label.
+In our case we are using quantile thresholds. After computing rolling annualized volatility σₜ(W), regimes are assigned using cross-sectional quantiles over time of σₜ(W) for each asset (e.g., LOW if σₜ(W) is below its own historical 30th percentile). This converts a continuous time series into an interpretable state label.
 
 ### How might this tool help?
 
