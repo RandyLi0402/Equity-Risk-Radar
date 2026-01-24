@@ -4,7 +4,7 @@
 A lightweight multi-asset risk dashboard that turns a list of tickers into a single "risk radar" report. Core analytics include rolling annualized volatility, rolling Sharpe ratio (using a daily risk-free rate derived from the annual rate), historical VaR/CVaR (Expected Shortfall) from empirical return quantiles, and drawdown / max drawdown based on peak-to-trough declines.
 
 
-For market context, the tool optionally accepts a benchmark and estimates rolling CAPM beta (rolling covariance with benchmark / rolling benchmark variance) and rolling correlation, using synchronized return windows. It also computes a return correlation matrix over a configurable lookback period and renders it as a heatmap to highlight diversification and clustering effects among assets. Results are presented as a compact “Risk Radar” report: normalized price paths, drawdown trajectories, rolling vol and Sharpe, correlation heatmap, plus a ranked text panel summarizing the latest metrics and rule-based alerts. Outputs can be exported as PNG + CSV for sharing and downstream analysis.
+For market context, the tool optionally accepts a benchmark ticker and estimates each asset's rolling CAPM-style beta (rolling covariance with benchmark / rolling benchmark variance) and rolling correlation, using synchronized return windows. It also computes a return correlation matrix over a configurable lookback period and renders it as a heatmap to highlight diversification and clustering effects among assets. Results are presented as a compact “Risk Radar” report: normalized price paths, drawdown trajectories, rolling vol and Sharpe, correlation heatmap, plus a ranked text panel summarizing the latest metrics and rule-based alerts. Outputs can be exported as PNG + CSV for sharing and downstream analysis.
 
 
 Built with Python: Streamlit for the UI, yfinance for market data retrieval, pandas/numpy for time-series processing, SciPy for statistical utilities, and Matplotlib for report visualization. 
@@ -20,7 +20,7 @@ Built with Python: Streamlit for the UI, yfinance for market data retrieval, pan
 **Max Drawdown**&emsp; Worst peak-to-trough loss over a period
 <p align="center"><img src="assets/max_dd.png" width="75%" height="75%"></img></p>
 
-**Rolling Sharpe Ratio**&emsp; Risk-adjusted performance over the last W days
+**Rolling Sharpe Ratio**&emsp; Mean excess return per unit of volatility over the last W days (annualized)
 <p align="center"><img src="assets/roll_sharpe.png" width="75%" height="75%"></img></p>
 
 **Historical Value-at-Risk (VaR)**&emsp; Worst-day loss threshold under historical behavior
