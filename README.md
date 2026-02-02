@@ -44,6 +44,17 @@ Built with Python: Streamlit for the UI, yfinance for market data retrieval, pan
 
 ---
 
+## Demo
+
+### Sample Generated Report
+<p align="center"><img src="assets/risk_radar_sample.png" width="75%" height="75%"></img></p>
+
+### Web UI
+<p align="center"><img src="assets/web_ui.png" width="75%" height="75%"></img></p>
+
+
+---
+
 ## Background
 
 ### What exactly does this pipeline do?
@@ -118,4 +129,3 @@ Fully customizable parameters are on the sidebar.
 - Metrics are sensitive to data quality (missing days, corporate actions, liquidity, etc.).
 - Historical VaR/CVaR assume the empirical distribution is informative for future risk.
 - Results depend on lookback/window choices and are not robust to regime shifts.
-

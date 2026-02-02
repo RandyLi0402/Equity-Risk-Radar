@@ -147,7 +147,7 @@ if st.session_state.get("ran") and st.session_state.get("png_bytes") is not None
         st.download_button(
             "Download Report PNG",
             data=st.session_state["png_bytes"],
-            file_name="risk_radar_{stamp}.png",
+            file_name=f"risk_radar_{stamp}.png",
             mime="image/png",
         )
 
@@ -158,7 +158,7 @@ if st.session_state.get("ran") and st.session_state.get("png_bytes") is not None
         st.download_button(
             "Download Metrics CSV",
             data=st.session_state["csv_bytes"],
-            file_name="latest_metrics_{stamp}.csv",
+            file_name=f"latest_metrics_{stamp}.csv",
             mime="text/csv",
         )
 
